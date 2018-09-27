@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/maple" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/member_name_title"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="8dp"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/member_spinner"
+            android:layout_gravity="center"
+            android:entries="@array/member_name"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="@string/caller"
+        android:id="@+id/caller_button"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <TableRow >
+            <TextView
+                android:text="@string/point_title"
+                android:layout_span="3"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+        </TableRow>
+        <TableRow >
+            <TextView
+                android:text="@string/point_1"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:layout_width="50dp"
+                android:gravity="center"
+                android:textSize="22sp"/>
+            <TextView
+                android:id="@+id/rank_1_name"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:layout_width="160dp"
+                android:textSize="22sp"/>
+            <TextView
+                android:id="@+id/rank_1_point"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:layout_width="80dp"
+                android:gravity="center"
+                android:textSize="22sp"/>
+        </TableRow>
+        <TableRow >
+            <TextView
+                android:text="@string/point_2"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/rank_2_name"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/rank_2_point"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </TableRow>
+        <TableRow >
+            <TextView
+                android:text="@string/point_3"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/rank_3_name"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/rank_3_point"
+                android:background="#ffd5ea"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </TableRow>
+    </TableLayout>
+
+    <WebView
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_gravity="right"
+        android:id="@+id/webview1"
+        android:layout_marginTop="20dp"
+        />
+
+    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:gravity="bottom|center">
+		<com.google.ads.AdView android:id="@+id/adView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			ads:adUnitId="xxxxxxxxxx"
+			ads:adSize="BANNER"
+			ads:testDevices="TEST_EMULATOR, TEST_DEVICE_ID"
+			ads:loadAdOnCreate="true"/>
+	</LinearLayout>
+
+</LinearLayout>
